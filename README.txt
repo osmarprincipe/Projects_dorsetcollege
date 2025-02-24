@@ -63,6 +63,32 @@ You will be evaluated on visual design, the usability and the perceived user exp
 Your UI should be clean and consistent between screens, meaning:
 
 
+Frist Project twine:
+Overview:
+Design a Twine game to encompass the design principles discussed in this course.
+
+Including:
+
+Formatting/Marking-up text
+Setting links to new story passages
+Adding style to the passages/styling elements
+Adding images to passages
+Adding or changing typography rules
+Using variables and if/else statements
+Creating complex variable interactions with setter links and probability conditions
+Objective:
+
+Build an interactive story using Twine with the following as submission:
+This is an individual project - the goal is to create a simple yet engaging non-linear narrative experience.
+
+It could be a narrative story, the user plays through a multi-threaded story from start to end. It could include elements of puzzle or role-playing games in this,
+ or take the form of a quiz or gameshow – as long as there is an uncertainty of outcome (multiple ways the experience can end, a win/lose etc.)
+
+Consider:
+How to structure your story (multiple endings or meaningful choices?)
+Could html page layout or use of colour, typography and images enhance the experience?
+y
+
 
 
 
