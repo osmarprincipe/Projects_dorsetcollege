@@ -1,0 +1,387 @@
+:: StoryTitle
+Normal friday
+
+
+:: StoryData
+{
+  "ifid": "C1FE6657-A51C-476F-9D29-EB463D9088A6",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: \ Wait until arrive to the place , the night is just starting. {"position":"800,350","size":"100,100"}
+<p class="main-text">[You have noticied that your friend is getting drunk. You are not sure if it was a good idea go to the pub.
+But you have arrived to the pub. What is the frist action could you do?]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/a5fe59b7abaaed30209b208f04ea0b3be730a31b7579d21df0c7b6bb12cc0e53?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740487974&Signature=GPj085xFiv0zK935L0E7nYmXnhKWzB3XJTyyai5PMNRGhqzbZAAD2qcByxAZxnD4JQ1d2c5cuoX5s%2FXaxKiOvlBxFAr07KxuoAwnoSlRu2QxmLFfC%2F24fhTFQGZXV91oDUvjUa0wv5djwc8iEqfdSiAarp%2FxCeKmMvpz4HONflZYH%2F1rcbtgCzaKnI9sYQINypuZF%2FreXMRJA4IsWnsYp0HtzjXqF4u0nB1s%2BrPZ2s0CKltEnTc2kosHdjJ0nBq6VQh4KukFNKyQNrurm%2BwxjX6jldkr72C8KUBfxJcytz0hqhy%2FL9LvrIx%2BK8960VAELPJJS%2B4ZxfbONSlg%2BRK%2Bqg%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[[Be aware, because you know, your friend will need help. 😇->Choose the best spot for fishing]]
+(color:red)[[Enjoy a night and go to the bar to get a pint. 👿  ->Go to the bar and get another pint]]
+
+
+:: \ ask the bartender for one more glass of water {"position":"475,1150","size":"100,100"}
+(set: $health to $health + 10)
+<p class="main-text">[UAUUU , thats was the best water you alredy have in your life.
+You fell you are ready again. You are at the bar, the party is busy.
+You decided to take a drink with you. 
+when you approached to the bar she tells you she dosnt like beer.
+what would you do?]
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]](color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/e67fd3e7819c35de03ed832917d290fb542c4b135f011c159256e6b2ed22fa90?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740491614&Signature=HXqCceToR72Yv81ZZ3UQ0mrf6ORkIYOOgr0cnp0ywnHPyJwiE1WUvIvKy0wX0TabjZy6qRLOg1AYVJGvidVulic1tdZP752QVNofEvS1xv2Kjtz%2BYuhEkRRuRNl1Xv1bTwACwrCs6fYU5hbktKhMCXTSiGF3%2FgcGrbizweX966F14pzl%2BLO1UyADbiFpCTCYc%2BUVzLRwa1ucGFepueKX1ri0eooRE884IeRjd4W7rrDjK%2FOkcwOxTnhV4FabZk4ssNkegd2gjGR65fOCe5U9W270qHsGLSVpPXA%2B0%2FeJlkvdK3LrkhUWrrrX6qDZvfuc3ZHhnJxmBCXRRmRJDCYP4A%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[[buy a beer. 😇 ->get another pint, of course, you couldnt stay with the empty hands when talking to her]] 
+(color:red)[[ask two shots , you are a gentleman. 👿->go for another shot]]
+
+
+:: 2 shots baby {"position":"475,625","size":"100,100"}
+(set: $shots to $shots + 1)
+(set: $health to $health -20)
+
+<p class="main-text">[OHHH , It was the best sesation you have ever had in years, the taste was soo good, but you have the feelling that you need more.]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/8922bde9fe0a8d1aba7d2340b234a91e9ab50bd757a367e84527b48f34b57537?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740487974&Signature=bAUuO%2FjJRdmwXLBw1yfkwNSeRlaxCydjAAlXD%2BnvGeYrS9K5pSpfRDgoJ9eQg0G8O2r3wjAvQbA6b%2FFsh3g4Xoo3cXhLEEizWAdE9f3l5XBXmtmY80CDcu8sqtu%2BYvdbm75LjokH2GkvPAVp%2BQ8MWcdzaKKO%2FSDmvWby3jt%2FxLyJejpYbfnMBUBXNbv1UWshdIlllXjd6RNNzM06daz2bs3x0c8Ta%2B3%2BiAzO35%2FV%2BmgLqSiZX7yPg9bkYCxUfcx33SNtv9b%2BqZhpvG%2F5YkiMcwjqpVF1vfG7oClYJ30yO5jEMyaNte1WVFSj6n5POI2%2Fq%2F%2F8ViCJ%2BLxMCGzAZFh73A%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Go for second round. 👿 ->go for second round]]
+(color:green)[[Take a break and drink a glass of water. 😇->Take a break and drink a glass of water]]
+
+
+
+:: Buy a beer for you and whatever for her {"position":"100,1500","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+(if: $health <= 0)[
+<p class="main-text">[**You were really close. You got the invitation, but you fell down when buying the drinks and went home by ambulance.**🚑🚑]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/aa3f7c64463dd53dab8655dd61a2df2a9ca15c649ba4ab04b953ccdb2180dd56?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740491196&Signature=iHENNiQ70oWIAx4%2BPRZhBytnlggFsjVR%2F09cX3PGgLXPvKLjDz3hpzIaNzrNSqzMawrSGRG89%2FbjAs6WdCxxwDcpQsGfDssQFAj3zaR5Zr2uLdyylRnv%2B4k2O6aTbEEoNnAjR3NWJD84j3%2B56LRpTuAfKDlCay0ahAi5pbfvtDo2iTUGVlTGAhWuSKbnfOK5qp08Y4nPfs6b30ww%2FLO1TxLzd6WNcLTlBIVOtsuP%2BmhUkl9uxuez0zSRZeEs4ksFO8XbcmCGfpgDViYpCMfpYba9gUl6R5PC10mXhzJ4jmlpSKMIE%2FfmSfaSqSpggHYIH%2F1vv232DVJ3h7vW3HOLgQ%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+
+**YOU HAVE PLAYED A GOOD GAME. BUT NOT ENOUGH. GAME OVER!** ☠️ (color: red)[**Health: (print: $health)% ❤️**]
+
+
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+
+(color:green)[[**Try Again**->Start]]
+]
+(else:)[
+
+<p class="main-text">[The trip was amazing , you had a lot of kisses and chating. The uber driver was scared.
+But you have arived. as soon as she steped on her house , she said she has the best tequila ever had, and if you drink one more shot with her you would have the best night of your life.So your last shot you have no option.]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) ❤️**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/6023246b5101754a109954d658ddf31e92ac1f5d5a6ed8a3c3b638b13fa8bc60?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488729&Signature=bNDMXRC8hOTR7%2F5zEy%2FehcyLYR2iK5qVdkILiH1gyCbPkcW2vO5M%2Fd%2FovsGdTt7ubyHN0drZ1ssmVIFwdC23sAuvRfcLu0%2Fq0D0f2wGJ5YnK8Wx9b3fkI71KIZGB6SeEKW8lI5ffYuvbJCXiI9TCsMlfPDAmaW7sHL5HxxwoFrCyMCqZvWWnsDtOwP4Fb4aVn56pfG2NtO2gVjsZWmyxTHzNZk9c9TlgUWE%2FRJKKPXPUOr5BKUuyE5d%2BD444uhRviQ5kRMkAp7jg61SB7iSirQ8PbVZtdM6i%2F%2F%2BHCf7nBKfAyLfsYEw5mCj%2FC5V94GBsjFoxtCw5DIZBkvSKzWnODQ%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Drink a shot of tequila. 👿->drink a shot of tequila]]
+(color:red)[[Drink a shot of tequila. 👿->drink a shot of tequila]]
+]
+
+
+
+
+:: Buy to more shots, to drink with her {"position":"125,1000","size":"100,100"}
+(set: $shots to $shots + 1)
+(set: $health to $health -20)
+
+<p class="main-text">[After a shot, she realized she needs water,It is very important to keep her enjoying the rest of the night.
+She calls the bartender. What action would you take?]
+
+(color:red)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/af62161e5509b03757c91a79de2da9c01a67af47bbbd7362f6248d535af9f6ad?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488589&Signature=E5aGqqwei1rHQstV4CSTr9ymMKeEf5P7DskrZAhwrSGHEJvnNjD69qo%2F8YasvuP4Fi8KKmMvBYch1lpakv%2FHEdKiHBrHz67VckUTZZHrp93YmNPVRJGo9Jjgf1VcGxXvKlgfRbWkKLUs6Z4VClM5pEBOX4843qYEqNimvgtMUQ4z1YTk0LIIopPLfOjMVGYo3Q%2FpgD1zw%2BGjWNei1xxiAy6gNd5CGbeyylty%2FR82eufnUl2Bg7EE2H0pUDbvByO1h9FNsR1jq6CMF%2BUyJJG4Z3fw6vIuyhWEDRQkfzsg7yvAWG3yC236nlC5bAZoLFURiaOrlQy1LgsEkGUCNUHGfw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[[Ask the bartender for one more glass of water. 😇-> ask the bartender for one more glass of water]]
+(color:red)[[Get another pint, of course, you couldnt stay with the empty hands when talking to her. 👿->get another pint, of course, you couldnt stay with the empty hands when talking to her]]
+
+
+
+
+:: Choose the best spot for fishing {"position":"750,500","size":"100,100"}
+<p class="main-text">[You are getting familiar with the place, you have noticed that everyone are drinking something. What would you do next ?]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/58673d1ad1c5c9a38b802a69eb9edba477b9498fe272b14b24fb1ea8043d9fb5?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488743&Signature=SVjU2%2BVbKBDZycpTqgh%2BAd4Aa7eWoI4xj2gjcDwznYM2SR9NTTQvhO0oPL44YJXR2SA6Fl1bVuY2f%2BFFMlNYnKIp4vmTCeAZ%2F3RLhmdsXGHvI6UP83DZQmq08bk7TbKsFYYqhi1Efvunj1pQA7T0f%2FZi9nY10UQn1NO7Vpdwyss7XSLE0hkuizfKCo3bW1YTbWQXM%2Fb2iZ9YC2tWUb6TOIEwTVKgBz%2BXPSyTIgc4KCLdILWrUy1QVQYkxXowHXdaNGLLFIkk8cz%2FtINttHf7seNIpKpyTWOh7d1zH7eiMtFtrbCUsH2TJdopcuKAh6iFBtI6RCT1I5nww5dTrbNMTg%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Take 2 shots of baby guiness and start the party with your friend. 👿 ->2 shots baby]]
+(color:green)[[Get a pint of guiness. 😇->pint of beer]]
+
+
+
+:: Go dancing, to know her better {"position":"475,975","size":"100,100"}
+<p class="main-text">[You are dancing , but you noticed you are a long time withouy any drinks , and the effects of the alcohol is going away, you fell you are loosing power. You realized you need something. When you just had approached to the bar she tells you that she does not like beers. What would you do ?]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(if: $shots > 0)[(color:orange)[**Shots: (print: $shots) 🥂**]]
+(else:)[]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/bc4b38a9daa80ccb2abd195876946b1ee1cf7ff247e38680a34d836b53ece356?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488275&Signature=gdmlGDyGnGt5oKxRFGhoHURbtcwAHLghy1bh%2FjB%2FJbllSnv0b4taAJKf5Vby0Flaf7yciHvewrxyxh0WD5eCmoFPlHEbKWpnSBd2Y3BoxEQ2KMqSuFEd7UIRTkKcsl%2BDi7RAWgBGcCs3iXGRxVQtrqic%2B4ltBUK4Fzh0g4Duc4n9uZXRQ%2Fs4fOVNZ2Uqi9KXLj7%2F%2F%2BdNhA78u4uM9%2Bt6S%2BBnhq3XN%2B5sisFV7HZVP%2B4niP9rRuAWtyazUS4mwSpZRzCUcMRkTUjCpWMkO%2FHG2av38zkqzgOjqEgMfN3yJCF%2BtfjURv5hlsPhWccZX047ihQd1Crj7U0Xe8gbW8fgbw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[[Buy another pint for you and fuck off her. 😇->get another pint, of course, you couldnt stay with the empty hands when talking to her]]
+(color:red)[[Ask for 2 baby guiness. 👿->go for another shot]]
+
+
+:: Go to the bar and get another pint {"position":"525,500","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+
+<p class="main-text">[The bartende have noticed that you are happy and ask you.
+Hey guys what will you drink tonight ?,...]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/f98404c0dfa8dc730ef8fbd70cea922a0b10b3ca05a1b54f03391bc0351a8481?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488013&Signature=SaJLFrP%2BdOd%2BA9azcn0Phb65cDPVdDitBrmInAP%2FtY5KYUoJ34BFOKFecDJ1ZQ4CgajKu9Vkmhiv1TTiCoeJLaRDAb6%2FtEbUII9Mu7nADAYiy6fogRxWP%2Fpf6VBeSZjFDX%2B5cMNmD4b1zzbeCVrAJVP8njuZidYYscPG8UUNgrqIr8frmsQtDygymoceGhkr1g7G4w0nxVLGgpwcr3qZ9eG4BY1kMOf1fr4V2LDDaw9EnwludET2Lf1P7y%2BGbGXt%2FldJVUyCo%2FXWPNyMt6bP2VLr3yt%2Fr4Jw%2BAJGY4I%2FfvCAHA7DNQa%2Bn%2Bwxxd7sFsXTjhaDKJZ2sB4e0B2%2BMb%2Fh1Q%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[['Only pints'😇->pint of beer]]
+(color:red)[['SHOT OF BABY GUINESS'  👿->2 shots baby]]
+
+
+:: Show her you are a good man and reject {"position":"625,1300","size":"100,100"}
+<p class="main-text">[After you rejected, she got furious and there is no choice.
+You have to drink with her.]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(if: $shots > 0)[(color:orange)[**Shots: (print: $shots) 🥂**]]
+(else:)[]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/73fd9b6e44ae1b5ed5db673c6c58615e9109e9d664e2a581947e30f55f0d730f?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488301&Signature=aZXaGe24LZN21cIRZGVZqmjCm3bbWIUPIf%2B8YBmfGrJLEA1SC4oRBV0eD3my6XWNbmW6nCM5Wc098S41gTqTa4lbFem8ENECA2Si8ajgcTNMFnWHugTlaTtlUSgOP%2BkF3knrWjo4sLmxAV%2F8BulxR9mPm3j87L5ZULHbMhHPjmndDmiicPnxVMGXJ%2BBWsy5XPo%2B4fB8m3Q06gKze1U1XRWcrk%2B%2BWnqpputSKJivuz8kEPLWykZ%2FeD%2BTY8O8OCCqUVKRWSfw%2B2SNjJXf%2BKx5ypOS7fgdrufhfsUAJfAvGph%2BWiOTjSuVOAnYLC230b9MgjhN6MSVfy%2BPjFyYQ9pzGxw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Order two shots. 😈->go for another shot]]
+(color:red)[[Order two shots. 😈 ->go for another shot]]
+
+
+:: Start {"position":"675,75","size":"100,100"}
+(set: $health to 100)
+(set: $pints to 0)
+(set: $shots to 0)
+<p class="main-text">[You and your best friend are getting ready for a big night out in Dublin. It's Friday, and the plan is simple: start with some drinks at home and then hit the pub! 🍻]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+           <img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/856ced52980419f749d2110137daacbdc12b47d429ba3dd2b5ce4bd41d817ed3?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740485320&Signature=OEDqdUrDj4aQ4PI3c9gWIn%2BdM2bQ95gb5bl1LwsKoU8HUfL92Rfa6qS51pjqwpw%2BCT4AUiIzlwIf6bqQvZnekCVarPKsHN8l5YDxpmN0PnpbgSVRkNxTq7EwyJo%2By096%2FO2zMQxrf9xGxnhGgqd7z6dRm94veyLbh7egfeTyOFUhGwXdNcrFFEWcgYnZaHcTlawKAQA7jEM4Y6TX5xi6%2FtC9LQZkdaWA5szVFTcqZqcmWQ6aAtm0mCWSrP1pkhQ9M28nvzgYMTJoZGQ0NxUz3uxIVvuzUNPmyx2az7x6qOHv%2BL6c6c%2BKPHAiBPHOwp5o3X9y9ySBimbCe%2BO%2Fzljknw%3D%3D"; <img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/856ced52980419f749d2110137daacbdc12b47d429ba3dd2b5ce4bd41d817ed3?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740485320&Signature=OEDqdUrDj4aQ4PI3c9gWIn%2BdM2bQ95gb5bl1LwsKoU8HUfL92Rfa6qS51pjqwpw%2BCT4AUiIzlwIf6bqQvZnekCVarPKsHN8l5YDxpmN0PnpbgSVRkNxTq7EwyJo%2By096%2FO2zMQxrf9xGxnhGgqd7z6dRm94veyLbh7egfeTyOFUhGwXdNcrFFEWcgYnZaHcTlawKAQA7jEM4Y6TX5xi6%2FtC9LQZkdaWA5szVFTcqZqcmWQ6aAtm0mCWSrP1pkhQ9M28nvzgYMTJoZGQ0NxUz3uxIVvuzUNPmyx2az7x6qOHv%2BL6c6c%2BKPHAiBPHOwp5o3X9y9ySBimbCe%2BO%2Fzljknw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[
+[[Start the warm up and get the frist beer.😈->Start the warm up and get the frist beer]]
+]
+
+
+
+:: Start the warm up and get the frist beer {"position":"700,225","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+
+<p class="main-text">[You feel good after a long week of work and you are ready to go to the pub.]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+     <img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/971a0aad5c0cd9041c0383774b86fe4644ebace4c24c40195066b94eeb301d4e?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740485318&Signature=isW4adNLA8tslu%2BiFCcI7kPp47J%2F0oLthZbpkUoxXAonmNyKItGL3et7SXxYZPksPVZfgLg%2Fk%2Bfa80oWlUES3RBJ91wBfauMz7Z4ICF5qbPNIeRp7TFOuKyopMraX8BK8C%2BBp3t57VTzOIFcKnH1rSXUkhDs8RjlAgeDMMkw1gn0gmfXNEBXgSoE2vN25povf1aaOKUpWAnahyuUOZSs0FO1e8U7n%2B7EoG5hgdqvjJaT4D%2FI7bsHSUlpis26tN1Mp0JrUzgnrDTXdKOD%2F%2BCBSr2drYJt5B6Lro7i8QtlUGNAe4gqK7%2FE1xknpBjXZx5Tr7C3gY5XVreUDkq1IHbLTw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[take a beer to drink on the away 👿->take a beer to drink on the away]]
+(color:green)[[Wait until arrive to the place , the night is just starting😇-> Wait until arrive to the place , the night is just starting.]]
+
+
+
+
+
+
+:: Take a break and drink a glass of water {"position":"500,775","size":"100,100"}
+(set: $health to $health + 10)
+<p class="main-text">[You fell good after a glass of water and you are ready to come back.
+What would you like to drink at the moment ?]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/26a94232aa0a016fa7e1beb3acaa2c7679cd15c32a48cbe67c5a0c2ce2cb2cfc?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740487974&Signature=OeIG1mdXwd5%2BM%2FFaPlO5YTDyiRl95OTIdjFv0heshZBB4O5xxmrDaItPSs6A97NMoMftvTsr%2FD3QQWSWp8x6oOl9WSvRQUDkZlcPlIs7nvC1CqtmsC8Wg1xyxn70DDQmdNWd8c04lVLnoqqIgIwhHw9JQ0hofUqUbOhfsZziq3pRkKCVJGerQ7kBHLiW9ixtawm6bM3x8Kqo8EBs9LOAfMiQ5qHGt6gzB9JJ%2BkcqsnideYECxxymS5fJOoH%2B8aRL%2BNmaKFk1e9fNJFcN7vq7asDDj3HJs3OhLrSYDyIhxEDpnaSpHzVwv1RmNqPkvofaI6pjo7c80HQBK3GWmMH4qQ%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[[order a beer. 😇->order a beer]]
+(color:red)[[call your friend for the second round of baby guiness.👿 ->go for second round]]
+
+
+:: You are only focused on her, you dont need any more drinks {"position":"550,1500","size":"100,100"}
+The trip was amazing , you had a lot of kisses and chating. The uber driver was scared.
+But you have arived, as soon as she steped on her house, she said she has the best tequila ever had. She also said if you drink one more shot with her you would have the best night of your life. So you have no choice.
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]](color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/6023246b5101754a109954d658ddf31e92ac1f5d5a6ed8a3c3b638b13fa8bc60?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488729&Signature=bNDMXRC8hOTR7%2F5zEy%2FehcyLYR2iK5qVdkILiH1gyCbPkcW2vO5M%2Fd%2FovsGdTt7ubyHN0drZ1ssmVIFwdC23sAuvRfcLu0%2Fq0D0f2wGJ5YnK8Wx9b3fkI71KIZGB6SeEKW8lI5ffYuvbJCXiI9TCsMlfPDAmaW7sHL5HxxwoFrCyMCqZvWWnsDtOwP4Fb4aVn56pfG2NtO2gVjsZWmyxTHzNZk9c9TlgUWE%2FRJKKPXPUOr5BKUuyE5d%2BD444uhRviQ5kRMkAp7jg61SB7iSirQ8PbVZtdM6i%2F%2F%2BHCf7nBKfAyLfsYEw5mCj%2FC5V94GBsjFoxtCw5DIZBkvSKzWnODQ%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Drink a shot of tequila. 😈->drink a shot of tequila]]
+(color:red)[[Drink a shot of tequila. 😈->drink a shot of tequila]]
+
+
+:: drink a shot of tequila {"position":"300,1625","size":"100,100"}
+(set: $shots to $shots + 1)
+(set: $health to $health -20)
+(if: $health > 0)[ **
+YOU WON🏆🥇
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/d7b1f263a6fe2bef2214f0677d70680dd41c1a600c326350cb5caad3485667f8?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488765&Signature=ZWlJoCSwFZUJ0c7aU03al1ryzK131wmQ%2F1IGkhK2CnXIaHr%2BfOPKDq%2FR6mauuJ8nF4NmTD5YDXr5bFVS0dsk9fw1b3JopVJnNN0ih5NEEYs75JrbnHpEaLOdETvmThPzsU9axLWY5SdSYozplBw68LcMzMlCf%2FrGEpqmb1Vz650thyQLDmVdLRTGZeOS%2FeXHGMKujnF4ZK%2B4tX3qWA6ZDAzDbghz7QcnkQMuWuThAF0fkqBWNkxc6gDRo3bpxj82tiYP576AnTLjswvTPGWs15zdn3wzcgnZwuD1H4Yi%2B%2FQf0YXzlItRttQ5z%2BD52OU0CmtcbNHuoNneLb97inJ%2FFw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+CONGRATULATIONS. YOU HAVE HAD THE BEST NIGHT OF YOUR LIFE.
+KEEP IT ON SECRET.**
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+
+**FAIR PLAY TO YOU!** 🤝
+
+(color:green)[[**Play Again**->Start]]
+]
+(else:)[
+<p class="main-text">[**You were almost there. But after the shot you have had a blackout and wake up on the next day with no memories.**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/d48f72bfbefb5e6aae0dfdbb0c4d057a89d19b49d13407d233601736a552ad76?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740491289&Signature=UW4495DnJzifYzb9Cr9kvuEYprVGlWN6n0BTx%2BrXuslBEiZg50nBBRa6InPPeUpoYqjVZIsV5gLUpStboiBq9nxINJOhWa8AKMIg3BsYp51QdwmrMcXKWtYIgJWdtmJkn1YzaSBqwEX22T%2B%2FgSg4%2F1iKGzxB%2Fg57uKiZvfiY7WpYhc8N3h%2BHkVmelcqLcYA7P4I%2Bn2nhamI80QMcmyZkJvSrkur8Pr9jd0XXTsLzjz7QaEOaUsjzKcGQ3YPhf5jZUDUMWorThZYR0NxdbnXLP412eEQZgV4KcbcMMfTl6M9HFj7X1XJHsxqGlCanjcrzRUfuP1MOsbdtHRVSLKIg9Q%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+**GAME OVER!** ☠️ (color: red)[**Health: (print: $health)% ❤️**]
+
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+
+(color:green)[[**Try Again**->Start]]
+]
+
+
+:: get another pint, of course, you couldnt stay with the empty hands when talking to her {"position":"200,1200","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+(if: $health <= 0)[
+<p class="main-text">[**Your stomac got upset, all the drinks were coming out from the top and the bottom , you had to go home.**🤮🤮]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/ba2b9d47c4ba230f48ef40fd8139504bd33b2c7a68093334ba141bdd94e5d0ff?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740490775&Signature=MdtzTQj0Oa2lbnkYDxte17iodtoeVaeVVsv2iusTkEY30S3fxpm1Gnq8ubl3xSpWdbQ5JJjSdSpDs2CubIEmZRWrYpIKqTeEUuBZAQaxXMQhf%2BrL4Xx67UIRer7qyGJ0wauU87c4TPcgdNzq8re5X1CWmJINGm1fnFOUvUcrDOjJRQc7lS0O5D7wnBJDD92CthKjLOc4694NOOW85Oeyul5E%2BxmEomm24vkV39XVrlBPJkrSQlci9MOHqcHxFZ8lJZcxcnzyULlKNisHvyBg2g8jWLAwb41PTZegmh%2BiDUXphODJAqnM584rQurz7ih72%2Byts3huRWAIqV4G0Fou5g%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+
+<p class="main-text">[**YOU HAVE PLAYED TOO HARD. GAME OVER!** ☠️ ](color:red)[**Health: (print: $health)% ❤️**]
+
+
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(if: $shots > 0)[(color:orange)[**Shots: (print: $shots) 🥂**]]
+(else:)[]
+
+(color:green)[[**Try Again**->Start]]
+
+]
+(else:)[
+
+<p class="main-text">[You are having a good time with her, she really liked you.
+She invites you for another shot of baby guiness.
+what would you do ?]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(if: $shots > 0)[(color:orange)[**Shots: (print: $shots) 🥂**]]
+(else:)[]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/8f9a6d1bfae27bc9e2a928a56559a14198dfe8ae3fec4824ef3a62acb5040cfd?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488746&Signature=KJoxaIwifBWL4%2Bl8jPYuqguMsTLI%2F5iWeV9I0VrmXYSc8nZgsv%2Fr%2BxzTAGl7rilhIurozjp%2Bs05UAVqbyS1MRn6tqnP2XWmefeaxNd211y%2F6yvMy17umKR0PPccZlAjn%2BigvGvPG%2BxqOp%2BtvRW%2FH6tPydxDn1S83V3PcsoDDbkUMOib0JfR43PdeV1Gk3DLsBcqNd%2FLhLcfy%2B1vC2HW3HR3MYaad74VxrConEeNPuD%2FCAfHsliKROz%2Bg%2BNdgNkvY9PY1ct9yOYxQIUur1nUohzMxs8QE7aQNciipnBUWrNJTTehAGCZnqA%2BZyldHtcDpngsPeibdX94DQ5Q8COuoaQ%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Go for another shot. 👿->go for another shot]]
+(color:green)[[Show her you are a good man and reject. 😇->Show her you are a good man and reject]]
+]
+
+
+
+
+:: go for another shot {"position":"275,1375","size":"100,100"}
+(set: $shots to $shots + 1)
+(set: $health to $health -20)
+
+(if: $health <= 0)[
+<p class="main-text">[**You were really close. But after the shot, you threw up on her, and she left.**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/9dc0144d900724217b8a0d79ab56b6d94fa6d75d547a4ec4a73ffd1a95a03baf?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740491034&Signature=Deem32NaxauuaMf1BQEYwe2%2BIjCAWsoVeCVgyEKFG0AwhEsncTviy1jAnCOQUB3udmG%2B9bModbXF%2BoPmiem1ilCnKvrzLGBiF%2BWJR0G6pATgK%2FSBwOEY2ZE%2FVEY8Bg%2FoRmkaqRXhCpvrp2JQgHLIG5Gvx7SEZIqOQcZQUFxyD28atN6xgAAmiRDlg1%2FZz0lhi%2BCwpBeEB0wYJWKgO0BNYMA3r%2FpMEbBbNq78Km3mo8eKFpuiKoRJ8Nh6WtWYXdIA1liAx2hsrYaiYPWe6fyahBA19%2FwBc7jd9T1vI%2BwILeMUHLhJJX%2Bi6HLp29BeQhuo2V0VozL1k2imeVM4LqT6cg%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+**YOU HAVE PLAYED HARD. GAME OVER!** ☠️ (color: red)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+
+
+(color:green)[[**Try Again**->Start]]
+
+]
+(else:)[
+<p class="main-text">[She is really happy with you and she invites you to her house.
+but she leaves far away, 1 hour by car and she had a idea. Buy a few drinkes to go drinking on the way.
+what would you do ?]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]](color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/5b6df392b71b14388c6f22af56645e35aba05cf1494ec20021c5ecdebd60bff4?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488595&Signature=WuSubf0e9kON9jSO5BdO4jq64g9fJDSCyndY9tQL7fuC3GScNQ81GFtdQ3TL8g0Vtg6Ig1OJt7xLJ7dZGbf%2FFeOXVqf21zLayR6%2BDMA%2FfL4TDJTCq3Ro8l7Z8s%2BleAHMFz8pLLzhIVz%2FYY1x6T9qmPGK7txM0Koo34vTnJzfiwupztbA7b6eQfjDkUJSzSRIZQBdUKA4hZgkAPSh8Gd2xUVne0c5fFEOPwoDPrOCzYNhBh%2Bbn49VHjiFrTF0VH7lUIiHgKVsGpRHZSq6U8W2dLAM2BvMpcM8TDse3PHLrlws%2FnIBkgG0aXcv1Y9mOLTEmHtpWSOxoLrLZ33YcTamJA%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Buy a beer for you and whatever for her. 👿->Buy a beer for you and whatever for her]]
+(color:green)[[You are only focused on her, you dont need any more drinks. 😇->You are only focused on her, you dont need any more drinks]]
+]
+
+
+
+:: go for second round {"position":"200,775","size":"100,100"}
+(set: $shots to $shots + 1)
+(set: $health to $health -20)
+
+<p class="main-text">[That one made your body warmed , ready for adventures.
+Just after you drunk the second shot , a beatifull irish girl invite to dance.
+what would you do ?]
+
+(if: $health <= 40)[(color:red)[**Health: (print: $health)% ❤️**]]
+(else:)[(color:green)[**Health: (print: $health)% ❤️**]]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+(color:orange)[**Shots: (print: $shots) 🥂**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/f43d2a69cfb81c48006662a27acdad2608a7bef4415773c4a5ac0bcb19bbfe44?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488019&Signature=eZcX0upNhPzv8qKdSCDf1urAfPA%2Fk3OjGnh2S3xzZ3F0y%2BWIf0NBaGxx4grjj%2BW0wXpZIbpqQyohaM5kkcVzWDHEPw6bAgP1bew5WvYxjMxK4HtGyr%2BmR2D86xk70GcDz%2FzSk%2BRhuE5%2FyIynRYKxm1s3bJQV7IpNc0yMKIsGFMmVQ%2FHYf2zdVGR2Do%2BbDm14Lrl7ZbllOX%2BKVrHCsvFsUEcQUelN5GYGL1hzvBJseNwqGEnl2cv%2BOS6uqgnqdZ7OaZvjlrzoxwEQThRoCJVwuXiUAbflIOCUHlIzJ4Ud4N7Z4yGv6B4mjVRYxjq41%2FqkmlsQA4C3a%2F3WEw1m2giQ%2Bg%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Buy to more shots, to drink with her. 👿->Buy to more shots, to drink with her]]
+(color:green)[[Go dancing, to know her better. 😇->Go dancing, to know her better]]
+
+
+
+:: order a beer {"position":"675,925","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+
+<p class="main-text">[You are observing the place, when a beatifull irish girl invites to dance.
+What would you do ?]
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) ❤️**]
+(if: $shots > 0)[(color:orange)[**Shots: (print: $shots) 🥂**]]
+(else:)[]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/1fe763417d0d38a7cb47e5e1a667ee01e1644993735a5ee27cbbf7747c455204?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488609&Signature=aKTijLL6u5ThBpwoVEYp9LUPkgmc1Ko668brHhddphLb3%2BfvpDrDV4vILrkXZXGotjs%2FV7MLd41UeFTF2umhTr6Zhm9ppodE6pZTtvJgUwlQrpBUjvtMnRJgqorUYEXn3lVaiM99A9Qyd6%2FDWaWnmND0qHryDprIUjSzPbMr6mC7yeBHsLYkBWZU9btwWVejcv0%2FRqOXpuJFWZfcOjb2yjHviaqdTZ1eE%2FZK4l9bKKU8%2FljFTKFOTQkK%2FIbNDdi7pBLlYuEMttnUtRgSnCfFlBeevnOVjpFuVe1fGbfOT2TIp%2FVS1%2FA%2BawrEc8GhdSPts%2BNxZrlKXwgN1F9hwX7ehw%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Buy two shots to drink with her. 👿->Buy to more shots, to drink with her]]
+(color:green)[[Go dancing, to know her better. 😇->Go dancing, to know her better]]
+
+
+:: pint of beer {"position":"725,675","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+
+<p class="main-text">[After when you have drunk a pint you felt you were unbeatable.
+You were alredy at the bar, your friend and you saw a few girls dancing, what would you do next?]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+<img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/fadf304711fc947810244cf1a41d6aa9fb7748e6aa34aca55df1eb9ae551066b?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740488017&Signature=FzA4W0d%2FWrmDIo%2B%2BSrQmH3oiG5RkWVlSQRGXURHAEgQ6bGvwo9CC11fiJ51C94aKkGllx05tCZ26q6BUNEbTGtRwRbb1QwY8%2FhY0kmpcBKEjEpV%2Bu6l4y2lIU28GpO12aqjmPxa1lh0Ga80GJqMWsP3e8tcuQzjTNXhdtOdstEKcYSFcOmkCENmihzwbnaJyHCbv3PqZaiMx8XBZqT7lXkpj7JfLjMGZUELjnU4fdvA5o8rM85bc2S89ukCjeHsQ%2Fto5bIhhv01CSlnn5VfFNYIxh3W0cq25GOwrEODHrRR5uvUVugZu5yAXFERBjpQ5BKj9RTcnmnHSXjfx1BnPMA%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:red)[[Order shots to drink with then. 👿->2 shots baby]]
+(color:green)[[order an other beer only for yourself. 😇  ->order a beer]]
+
+
+:: take a beer to drink on the away {"position":"600,350","size":"100,100"}
+(set: $pints to $pints + 1)
+(set: $health to $health -10)
+
+<p class="main-text">[You have noticed that your friend is getting drunk. You are not sure if it was a good idea to go to the pub.
+But you have arrived at the pub. What is the first action could you take?]
+
+(color:green)[**Health: (print: $health)% ❤️**]
+(color:yellow)[**Pints: (print: $pints) 🍻**]
+   <img src="https://storage.googleapis.com/lt-infinity-prd/artifacts/model-serving/a5fe59b7abaaed30209b208f04ea0b3be730a31b7579d21df0c7b6bb12cc0e53?GoogleAccessId=infinity-prd%40ltx-vl-web-prd.iam.gserviceaccount.com&Expires=1740487974&Signature=GPj085xFiv0zK935L0E7nYmXnhKWzB3XJTyyai5PMNRGhqzbZAAD2qcByxAZxnD4JQ1d2c5cuoX5s%2FXaxKiOvlBxFAr07KxuoAwnoSlRu2QxmLFfC%2F24fhTFQGZXV91oDUvjUa0wv5djwc8iEqfdSiAarp%2FxCeKmMvpz4HONflZYH%2F1rcbtgCzaKnI9sYQINypuZF%2FreXMRJA4IsWnsYp0HtzjXqF4u0nB1s%2BrPZ2s0CKltEnTc2kosHdjJ0nBq6VQh4KukFNKyQNrurm%2BwxjX6jldkr72C8KUBfxJcytz0hqhy%2FL9LvrIx%2BK8960VAELPJJS%2B4ZxfbONSlg%2BRK%2Bqg%3D%3D"; style="display: block; margin: 20px auto; width: 60%;">
+(color:green)[[Choose the spot with the better view 😇->Choose the best spot for fishing]]
+(color:red)[[Go to the bar and get another pint 👿->Go to the bar and get another pint]]
+
+
+
+
+:: StoryStylesheet [stylesheet]
+img.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-text {
+    font-family: 'Montserrat',
+    font-size: 24px;
+    font-weight: bold;
+    color: lightblue;
+}
+
