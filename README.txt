@@ -39,6 +39,9 @@ Frist Project twine:
 Overview:
 Design a Twine game to encompass the design principles discussed in this course.
 
+NetWorking Project :
+A college-level networking project building and configuring a small LAN with routers and switches, implementing DHCP, VLANs, and basic security rules to simulate a real office environment.
+
 
 
 
