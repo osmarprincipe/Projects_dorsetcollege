@@ -5,39 +5,11 @@ Frist Project python - price discount -  project 1 python Frist year college:
 
 Write a Python program for a retail store that calculates a discount based on each customer’s age and the total amount spent on a product. The program should run in a loop to process multiple customers, and only stop when the user chooses to exit.
 
-The store offers the following discounts:
-
-1.	Age-based Discount: If the customer is below 18 years old, they get a 10% discount on the product price.
-2.	Promotion: If the total price after the age-based discount is over €100, the customer receives an additional €10 discount.
-
-Requirements:
-
-1.	Use a while loop to allow multiple customer entries.
-2.	Use input() to get the customer’s age and product price.
-3.	Apply an if statement to determine eligibility for each discount.
-4.	Display the final price and any discounts applied.
-5.	After processing each customer, ask if the user wants to enter details for another customer. Exit if the answer is "no."
-
-
-
-
 Second Project python - Blood Compatibility - project 2 python Frist year college:
 
 You are tasked with creating a Python program to help educate patients at a local 
-clinic about blood type compatibility. The program should:
+clinic about blood type compatibility.
  
-Display a welcome message introducing the purpose of the program. 
-Provide menu options for the user to: 
-Use functions to perform compatibility checks for:
-Implement error handling for invalid input 
-
-Requirements: 
-• Use at least one list to store blood types or compatibility data. 
-• Use loops for user interaction until they choose to exit. 
-• Use if-statements to handle user choices and compatibility logic. 
-• Use functions to organize code into reusable blocks. 
-• Provide clear and user-friendly output.
-
 UX DESING PROJECTS:
 
 Frist Project Figma - Wireframe Educational app -project 1 figma Frist year college :
@@ -67,27 +39,6 @@ Frist Project twine:
 Overview:
 Design a Twine game to encompass the design principles discussed in this course.
 
-Including:
-
-Formatting/Marking-up text
-Setting links to new story passages
-Adding style to the passages/styling elements
-Adding images to passages
-Adding or changing typography rules
-Using variables and if/else statements
-Creating complex variable interactions with setter links and probability conditions
-Objective:
-
-Build an interactive story using Twine with the following as submission:
-This is an individual project - the goal is to create a simple yet engaging non-linear narrative experience.
-
-It could be a narrative story, the user plays through a multi-threaded story from start to end. It could include elements of puzzle or role-playing games in this,
- or take the form of a quiz or gameshow – as long as there is an uncertainty of outcome (multiple ways the experience can end, a win/lose etc.)
-
-Consider:
-How to structure your story (multiple endings or meaningful choices?)
-Could html page layout or use of colour, typography and images enhance the experience?
-y
 
 
 
